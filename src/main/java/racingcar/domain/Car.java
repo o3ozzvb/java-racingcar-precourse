@@ -1,8 +1,5 @@
 package racingcar.domain;
 
-import org.junit.platform.commons.util.StringUtils;
-import racingcar.constant.Message;
-
 public class Car {
 
     public static final int INIT_POS = 0;
@@ -20,5 +17,11 @@ public class Car {
 
     public int getPosition() {
         return position;
+    }
+
+    public void move(MoveStrategy moveStrategy) {
+        if (moveStrategy.movable()) {
+            this.position += 1;
+        }
     }
 }

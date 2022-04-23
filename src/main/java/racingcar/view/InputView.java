@@ -1,7 +1,7 @@
 package racingcar.view;
 
 import racingcar.constant.Message;
-import  camp.nextstep.edu.missionutils.Console;
+import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 

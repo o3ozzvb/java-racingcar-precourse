@@ -1,6 +1,5 @@
 package racingcar.domain;
 
-import org.junit.platform.commons.util.StringUtils;
 import racingcar.constant.Message;
 
 public class CarName {

@@ -12,14 +12,14 @@ class RoundTest {
 
     @DisplayName("이동 횟수 양의 정수인지 검증 - 정상 케이스")
     @ParameterizedTest
-    @ValueSource(strings = {"0", "1234", "78"})
+    @ValueSource(strings = {"1", "1234", "78"})
     void validMoveCountTest_OK(String input) {
         assertThatCode(() -> new Round(input)).doesNotThrowAnyException();
     }
 
     @DisplayName("이동 횟수 양의 정수인지 검증 - 에러 케이스")
     @ParameterizedTest
-    @ValueSource(strings = {"", "-1", "0.23", "1qkdk", "!@dfjj"})
+    @ValueSource(strings = {"", "0", "-1", "0.23", "1qkdk", "!@dfjj"})
     void validMoveCountTest_ERR(String input) {
         assertThatThrownBy(() -> new Round(input))
                 .isInstanceOf(IllegalArgumentException.class)

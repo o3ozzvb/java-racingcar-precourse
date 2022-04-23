@@ -5,7 +5,7 @@ import java.util.*;
 public class Cars {
 
     public static final String SEPARATOR = ",";
-    public static final String DELIMITER = ",";
+    public static final String DELIMITER = ", ";
 
     private List<Car> carList;
     private MoveStrategy moveStrategy;
@@ -39,7 +39,7 @@ public class Cars {
         for (Car car : this.carList) {
             winners = getWinner(car, maxPos, winners);
         }
-        if(winners.length() > 0) winners = winners.substring(0, winners.length()-1);
+        if(winners.length() > 0) winners = winners.substring(0, winners.length()-DELIMITER.length());
         return winners;
     }
 

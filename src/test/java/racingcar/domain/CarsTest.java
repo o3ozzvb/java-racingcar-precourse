@@ -31,7 +31,7 @@ class CarsTest {
         carList.add(new Car("car3", 8));
         Cars cars = new Cars(carList);
 
-        assertThat(cars.getWinners()).isEqualTo("car1,car2");
+        assertThat(cars.getWinners()).isEqualTo("car1, car2");
     }
 
 }

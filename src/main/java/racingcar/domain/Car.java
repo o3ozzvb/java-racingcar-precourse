@@ -3,6 +3,8 @@ package racingcar.domain;
 public class Car {
 
     public static final int INIT_POS = 0;
+    public static final String PATH_PATTERN = "-";
+
     private CarName name;
     private int position;
 
@@ -11,8 +13,8 @@ public class Car {
         this.position = INIT_POS;
     }
 
-    public CarName getName() {
-        return name;
+    public String getName() {
+        return name.getName();
     }
 
     public int getPosition() {
@@ -23,5 +25,13 @@ public class Car {
         if (moveStrategy.movable()) {
             this.position += 1;
         }
+    }
+
+    public String getPath() {
+        String path = "";
+        for (int i=0; i<this.position; i++) {
+            path = path.concat(PATH_PATTERN);
+        }
+        return path;
     }
 }

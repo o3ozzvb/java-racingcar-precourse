@@ -13,6 +13,11 @@ public class Car {
         this.position = INIT_POS;
     }
 
+    public Car(String name, int position) {
+        this.name = new CarName(name);
+        this.position = position;
+    }
+
     public String getName() {
         return name.getName();
     }
@@ -33,5 +38,9 @@ public class Car {
             path = path.concat(PATH_PATTERN);
         }
         return path;
+    }
+
+    public boolean isWinner(int maxPosition) {
+        return this.position == maxPosition;
     }
 }
